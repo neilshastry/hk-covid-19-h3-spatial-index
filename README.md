@@ -11,8 +11,8 @@ Visualize neighbourhoods with overlayed h3 polygons on districts and buildings w
 [![Made withJupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&logo=Jupyter)](https://jupyter.org/try)
 
 ## Table of Contents
-#### [What is H3](##What-is-H3)
-#### [Dataset](##Dataset)
+#### [What is H3](#What-is-H3)
+#### [Dataset](#Dataset)
 #### [Data Wrangling](#Data-Wrangling)
 #### [H3 Modules](#Functions-for-H3-Mapping)
 #### [Python Visualization](#Python-Visualization)
