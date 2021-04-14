@@ -106,7 +106,7 @@ The h3_to_geo_boundary module essentially helps us define our hexagon shape (i.e
 Our final section covers the mapping of the hex reference shape and coordinate data over a map of Hong Kong.
 For our use case, we leverage ['© OpenStreetMap contributors'](https://www.openstreetmap.org/copyright).
 
-We then build a choropleth map by converting our data with the hexagonal references in our previous step into a GeoJson file format by calling the Folium library. Folium is a Python library used for visualizing geospatial data. Folium is a Python wrapper for Leaflet.js which is a leading open-source JavaScript library for plotting interactive maps.
+We can build a choropleth map by converting our data with the hexagonal references in our previous step into a GeoJson file format by calling the Folium library. Folium is a Python library used for visualizing geospatial data. Folium is a Python wrapper for Leaflet.js which is a leading open-source JavaScript library for plotting interactive maps.
 
 Finally, we plot our outputs at two levels: district with wider hexagons; buildings with finer hexagons.
 
@@ -121,4 +121,8 @@ Finally, we plot our outputs at two levels: district with wider hexagons; buildi
 Neil Shastry
 
 ## Acknowledgments
-
+I would sincerely like to acknowledge the references and inspirations for this project across a wide range of sources.
+1. The [HK Government](https://data.gov.hk/en/) for providing excellent and quality data and making it available for the public to use.
+2. Uber for building and open sourcing such a wonderful library and [information](https://eng.uber.com/h3/) for us to reference in our visualization.
+3. Abdullah Kurkcu's Better programming [article](https://betterprogramming.pub/playing-with-ubers-hexagonal-hierarchical-spatial-index-h3-ed8d5cd7739d) was indeed the biggest reference point and guide to form the baseline and scope for our work.
+4. Abhishek Sharma [piece](https://www.analyticsvidhya.com/blog/2020/06/guide-geospatial-analysis-folium-python/) in Analytics Vidhya.
