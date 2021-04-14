@@ -32,6 +32,18 @@ This powerful tool to visualize spatial data has now open source on [Github](htt
 
 
 ## Dataset
+The Hong Kong Government has a [website](https://data.gov.hk/en-data/dataset/hk-dh-chpsebcddr-novel-infectious-agent) which publishes excellent and transparent data for probable / confirmed covid-19 patients in both English and Chinese. The main data segments published and updated with a one day lag include:
+1. Residential and commerical buildings lived / visited in the prior 14 days
+2. Details on cases and hospitalization
+3. Latest situation of reported cases
+4. Flights / Trains / Ships / Taxis taken by confirmed cases
+
+For our purpose, we will limit the use case for our dataset to the first dataset and plot the spatial data based on residential and commercial buildings visited or lived in by Covid-19 patients within the last 14 days.
+
+The API for the English version of this data is available [here](https://data.gov.hk/en-data/dataset/hk-dh-chpsebcddr-novel-infectious-agent/resource/cf287e7e-cb41-4421-b9d1-068d3a3b61c0).
+
+
+![Screenshot 2021-04-14 at 1 33 34 PM](https://user-images.githubusercontent.com/36125669/114659416-27623e00-9d26-11eb-9182-ed9b7db4fc99.jpeg)
 
 ## Data Wrangling
 
