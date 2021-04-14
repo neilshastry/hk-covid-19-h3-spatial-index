@@ -88,18 +88,33 @@ This coordinate mapping now allows us to use the H3 spatial index libraries to c
 
 ## H3 Modules
 
-There are two critical mappings we now perform with the H3 modules.
+There are three critical mappings we now perform with the H3 modules.
 
 #### 1. geo_to_h3
 The geo_to_h3 module helps us convert our latitude and longitude coordinates to a Hex index reference. This Hex reference has a 'resolution' parameter that allows us the flexibly to choose the level of granularity between 1 (widest) to 15 (finest). A resolution of 9 is roughly equivalent to plotting a hexagon over an city block.
 
-#### 1. h3_to_geo_boundary
+#### 2. h3_get_resolution
+The h3_get_resolution module allows us to move up or down in granularity based on the resolution parameter previously defined to change the index reference based on the value between 1 to 15.
+
+#### 3. h3_to_geo_boundary
 The h3_to_geo_boundary module essentially helps us define our hexagon shape (i.e. Polygon) and map the vertices for the Hex index based on the coordinates that border the Hex index reference that we defined with the geo_to_h3 module.
 
-**Output:** The combined 
-
+**Output:** The combined output after running our dataset over both modules looks something like this with a value parameter that counts the number of times that hex id is referenced.
+<img width="430" alt="Hex ID" src="https://user-images.githubusercontent.com/36125669/114706631-c6edf380-9d5b-11eb-8432-f23380ad4ff5.png">
 
 ## Python Visualization
+Our final section covers the mapping of the hex reference shape and coordinate data over a map of Hong Kong.
+For our use case, we leverage ['© OpenStreetMap contributors'](https://www.openstreetmap.org/copyright).
+
+We then build a choropleth map by converting our data with the hexagonal references in our previous step into a GeoJson file format by calling the Folium library. Folium is a Python library used for visualizing geospatial data. Folium is a Python wrapper for Leaflet.js which is a leading open-source JavaScript library for plotting interactive maps.
+
+Finally, we plot our outputs at two levels: district with wider hexagons; buildings with finer hexagons.
+
+**Output: District Level**
+<img width="987" alt="District Map" src="https://user-images.githubusercontent.com/36125669/114707038-54314800-9d5c-11eb-996b-53101ca7b646.png">
+
+**Output: Building Level**
+<img width="988" alt="Building Map" src="https://user-images.githubusercontent.com/36125669/114707060-598e9280-9d5c-11eb-9662-5395ecdbf3fc.png">
 
 
 ## Author
