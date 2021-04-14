@@ -14,7 +14,7 @@ Visualize neighbourhoods with overlayed h3 polygons on districts and buildings w
 #### [What is H3](##What-is-H3)
 #### [Dataset](##Dataset)
 #### [Data Wrangling](#Data-Wrangling)
-#### [Functions for H3 Mapping](#Functions-for-H3-Mapping)
+#### [H3 Modules](#Functions-for-H3-Mapping)
 #### [Python Visualization](#Python-Visualization)
 
 ## What is H3
@@ -51,7 +51,10 @@ This section covers brief highlights on importing the data and then the process 
 
 #### 1. Importing Data
 
-We set up a dynamic date counter to pull the most recent from the API without manual intervention.
+**Input:** Raw Data for Residential and Commercial buildings with probable / confirmed cases
+![Screenshot 2021-04-14 at 6 16 15 PM](https://user-images.githubusercontent.com/36125669/114698966-4971b580-9d52-11eb-8bb7-7bda49e312b5.jpeg)
+
+We set up a dynamic date counter to pull the most recent data from the API without manual intervention.
 
 ```
 from datetime import date, timedelta
@@ -66,12 +69,29 @@ data = pd.read_csv(io.StringIO(result.decode('utf-8')))
 
 ```
 
-![Screenshot 2021-04-14 at 6 16 15 PM](https://user-images.githubusercontent.com/36125669/114698756-0adbfb00-9d52-11eb-9be0-e52ddd333737.jpeg)
+**Output:** Pandas dataframe based on imported raw data
+![Screenshot 2021-04-14 at 6 53 04 PM](https://user-images.githubusercontent.com/36125669/114699481-f2b8ab80-9d52-11eb-9fdd-99ab10ec4fb1.jpeg)
 
+#### 2. Mapping the Latitude and Longitude
 
+In order to leverage the H3 spatial index we need to map the latitude and longitude of the districts and building names leveraging the geopy library in python. This will provide us the coordinates we can then use to create the data structure required for visualizing hexagons. 
 
-## Functions for H3 Mapping
+**Output 1:**
+Mapped latitude and longitude coordinates. Some missing values present for building names that were unidentified.
+<img width="993" alt="Map Lat and Long 1" src="https://user-images.githubusercontent.com/36125669/114703458-e4b95980-9d57-11eb-9055-d4812f4a9660.png">
 
+**Output 2:**
+Populating the missing building coordinate data with the district coorindates as a proxy.
+<img width="988" alt="Map Lat and Long 2" src="https://user-images.githubusercontent.com/36125669/114703531-01ee2800-9d58-11eb-8dd4-f0c19c528705.png">
+
+This coordinate mapping now allows us to use the H3 spatial index libraries to convert coordinates to hexagonal tiles over Hong Kong.
+
+## H3 Modules
+
+There are two critical mappings we now perform with the H3 libraries.
+
+#### 1. geo_to_h3
+The geo_to_h3 
 
 
 ## Python Visualization
