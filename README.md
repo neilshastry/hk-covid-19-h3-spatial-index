@@ -7,11 +7,11 @@ Personal project to build a spatial index visualization to quickly identify Covi
 Visualize neighbourhoods (districts and buildings) with an overlayed h3 polygon heatmap of covid-19 cases based on intensity
 
 # Table of Contents
-[What is H3](# What is H3)
-[Dataset](# Dataset)
-[Data Wrangling](# Data Wrangling)
-[Functions for H3 Mapping](# Functions for H3 Mapping)
-[Python Visualization](# Python Visualization)
+## [What is H3](#What-is-H3)
+## [Dataset](#Dataset)
+## [Data Wrangling](#Data-Wrangling)
+## [Functions for H3 Mapping](#Functions-for-H3-Mapping)
+## [Python Visualization](#Python-Visualization)
 
 # What is H3
 
