@@ -88,10 +88,15 @@ This coordinate mapping now allows us to use the H3 spatial index libraries to c
 
 ## H3 Modules
 
-There are two critical mappings we now perform with the H3 libraries.
+There are two critical mappings we now perform with the H3 modules.
 
 #### 1. geo_to_h3
-The geo_to_h3 
+The geo_to_h3 module helps us convert our latitude and longitude coordinates to a Hex index reference. This Hex reference has a 'resolution' parameter that allows us the flexibly to choose the level of granularity between 1 (widest) to 15 (finest). A resolution of 9 is roughly equivalent to plotting a hexagon over an city block.
+
+#### 1. h3_to_geo_boundary
+The h3_to_geo_boundary module essentially helps us define our hexagon shape (i.e. Polygon) and map the vertices for the Hex index based on the coordinates that border the Hex index reference that we defined with the geo_to_h3 module.
+
+**Output:** The combined 
 
 
 ## Python Visualization
