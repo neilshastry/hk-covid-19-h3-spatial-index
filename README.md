@@ -81,7 +81,7 @@ Mapped latitude and longitude coordinates. Some missing values present for build
 <img width="993" alt="Map Lat and Long 1" src="https://user-images.githubusercontent.com/36125669/114703458-e4b95980-9d57-11eb-9055-d4812f4a9660.png">
 
 **Output 2:**
-Populating the missing building coordinate data with the district coorindates as a proxy.
+Populating the missing building coordinate data with the district coordinates as a proxy.
 <img width="988" alt="Map Lat and Long 2" src="https://user-images.githubusercontent.com/36125669/114703531-01ee2800-9d58-11eb-8dd4-f0c19c528705.png">
 
 This coordinate mapping now allows us to use the H3 spatial index libraries to convert coordinates to hexagonal tiles over Hong Kong.
