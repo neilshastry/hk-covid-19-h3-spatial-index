@@ -11,11 +11,11 @@ Visualize neighbourhoods with overlayed h3 polygons on districts and buildings w
 [![Made withJupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&logo=Jupyter)](https://jupyter.org/try)
 
 ## Table of Contents
-#### [What is H3](#What-is-H3)
-#### [Dataset](#Dataset)
-#### [Data Wrangling](#Data-Wrangling)
-#### [H3 Modules](#Functions-for-H3-Mapping)
-#### [Python Visualization](#Python-Visualization)
+#### [What is H3](#https://github.com/neilshastry/hk-covid-19-h3-spatial-index/blob/main/README.md#what-is-h3-1)
+#### [Dataset](#https://github.com/neilshastry/hk-covid-19-h3-spatial-index/blob/main/README.md#dataset-1)
+#### [Data Wrangling](#data-wrangling-1)
+#### [H3 Modules](#h3-modules-1)
+#### [Python Visualization](#python-visualization-1)
 
 ## What is H3
 
