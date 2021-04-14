@@ -14,14 +14,15 @@ Visualize neighbourhoods (districts and buildings) with an overlayed h3 polygon 
 #### [Python Visualization](#Python-Visualization)
 
 ## What is H3
+
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://eng.uber.com/category/articles/open-source-articles/)
+
 Uber H3 is a grid system for efficiently optimizing ride pricing and dispatch, for visualizing and exploring spatial data. H3 enables Uber to analyze geographic information to set dynamic prices and make other decisions on a city-wide level. They use H3 as the grid system for analysis and optimization throughout our marketplaces. H3 was designed for this purpose, and led us to make some choices such as using hexagonal, hierarchical indexes.
 
 ![Screenshot 2021-04-14 at 12 47 03 PM](https://user-images.githubusercontent.com/36125669/114655955-d4858800-9d1f-11eb-8d6c-247f88c5a782.jpeg)
 [Source](https://eng.uber.com/h3/)
 
 This powerful tool to visualize spatial data has now open source on [Github](https://uber.github.io/h3/)
-
-![Open Source](https://eng.uber.com/category/articles/open-source-articles/)
 
 
 ## Dataset
@@ -38,4 +39,3 @@ Neil Shastry
 
 ## Acknowledgments
 
-![Screenshot 2021-04-14 at 12 47 03 PM](https://user-images.githubusercontent.com/36125669/114655928-c9caf300-9d1f-11eb-8fb2-f12e62dced37.jpeg)
