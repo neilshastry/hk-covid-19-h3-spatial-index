@@ -11,8 +11,8 @@ Visualize neighbourhoods with overlayed h3 polygons on districts and buildings w
 [![Made withJupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&logo=Jupyter)](https://jupyter.org/try)
 
 ## Table of Contents
-#### [What is H3](#https://github.com/neilshastry/hk-covid-19-h3-spatial-index/blob/main/README.md#what-is-h3-1)
-#### [Dataset](#https://github.com/neilshastry/hk-covid-19-h3-spatial-index/blob/main/README.md#dataset-1)
+#### [What is H3](#what-is-h3-1)
+#### [Dataset](#dataset-1)
 #### [Data Wrangling](#data-wrangling-1)
 #### [H3 Modules](#h3-modules-1)
 #### [Python Visualization](#python-visualization-1)
@@ -28,7 +28,7 @@ It is written in C but there are bindings available for other languages.
 ![Screenshot 2021-04-14 at 12 47 03 PM](https://user-images.githubusercontent.com/36125669/114655955-d4858800-9d1f-11eb-8d6c-247f88c5a782.jpeg)
 **Source:** (https://eng.uber.com/h3/)
 
-This powerful tool to visualize spatial data is available as open source [Github](https://uber.github.io/h3/)
+This powerful tool to visualize spatial data is available as open source [Github](https://uber.github.io/h3/).
 
 
 ## Dataset
@@ -94,21 +94,21 @@ There are three critical mappings we now perform with the H3 modules.
 The geo_to_h3 module helps us convert our latitude and longitude coordinates to a Hex index reference. This Hex reference has a 'resolution' parameter that allows us the flexibly to choose the level of granularity between 1 (widest) to 15 (finest). A resolution of 9 is roughly equivalent to plotting a hexagon over an city block.
 
 #### 2. h3_get_resolution
-The h3_get_resolution module allows us to move up or down in granularity based on the resolution parameter previously defined to change the index reference based on the value between 1 to 15.
+The h3_get_resolution module helps change the Hex index value for us based on the resolution parameter defined for the level of granularity.
 
 #### 3. h3_to_geo_boundary
-The h3_to_geo_boundary module essentially helps us define our hexagon shape (i.e. Polygon) and map the vertices for the Hex index based on the coordinates that border the Hex index reference that we defined with the geo_to_h3 module.
+The h3_to_geo_boundary module essentially helps us define our hexagon shape (i.e. Polygon) and map the vertices around the Hex index reference.
 
 **Output:** The combined output after running our dataset over both modules looks something like this with a value parameter that counts the number of times that hex id is referenced.
 <img width="430" alt="Hex ID" src="https://user-images.githubusercontent.com/36125669/114706631-c6edf380-9d5b-11eb-8432-f23380ad4ff5.png">
 
 ## Python Visualization
 Our final section covers the mapping of the hex reference shape and coordinate data over a map of Hong Kong.
-For our use case, we leverage ['© OpenStreetMap contributors'](https://www.openstreetmap.org/copyright).
+For our use case, we leverage ['© OpenStreetMap contributors'](https://www.openstreetmap.org/copyright) as a base reference for mapping.
 
-We can build a choropleth map by converting our data with the hexagonal references in our previous step into a GeoJson file format by calling the Folium library. Folium is a Python library used for visualizing geospatial data. Folium is a Python wrapper for Leaflet.js which is a leading open-source JavaScript library for plotting interactive maps.
+We can build a choropleth map by converting the data with the hexagonal references in our previous step into a GeoJson file format by calling the Folium library. Folium is a Python library used for visualizing geospatial data. Folium is a Python wrapper for Leaflet.js which is a leading open-source JavaScript library for plotting interactive maps.
 
-Finally, we plot our outputs at two levels: district with wider hexagons; buildings with finer hexagons.
+Finally, the GeoJson data can be plotted on our open source map with the H3 tiles overlayed at two levels: district with wider hexagons; buildings with finer hexagons.
 
 **Output: District Level**
 <img width="987" alt="District Map" src="https://user-images.githubusercontent.com/36125669/114707038-54314800-9d5c-11eb-996b-53101ca7b646.png">
