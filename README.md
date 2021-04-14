@@ -100,6 +100,7 @@ The h3_get_resolution module helps change the Hex index value for us based on th
 The h3_to_geo_boundary module essentially helps us define our hexagon shape (i.e. Polygon) and map the vertices around the Hex index reference.
 
 **Output:** The combined output after running our dataset over both modules looks something like this with a value parameter that counts the number of times that hex id is referenced.
+
 <img width="430" alt="Hex ID" src="https://user-images.githubusercontent.com/36125669/114706631-c6edf380-9d5b-11eb-8432-f23380ad4ff5.png">
 
 ## Python Visualization
