@@ -112,9 +112,11 @@ We can build a choropleth map by converting the data with the hexagonal referenc
 Finally, the GeoJson data can be plotted on our open source map with the H3 tiles overlayed at two levels: district with wider hexagons; buildings with finer hexagons.
 
 **Output: District Level**
+Data: as of 13-Apr-2021
 <img width="987" alt="District Map" src="https://user-images.githubusercontent.com/36125669/114707038-54314800-9d5c-11eb-996b-53101ca7b646.png">
 
 **Output: Building Level**
+Data: as of 13-Apr-2021
 <img width="988" alt="Building Map" src="https://user-images.githubusercontent.com/36125669/114707060-598e9280-9d5c-11eb-9662-5395ecdbf3fc.png">
 
 
